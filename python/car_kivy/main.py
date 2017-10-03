@@ -3,7 +3,6 @@
 from kivy.app import App
 from kivy.properties import ObjectProperty
 from kivy.uix.widget import Widget
-from kivy.lang.builder import Builder
 from gpiozero import Servo
 
 VERSION = '0.0.1'
@@ -50,6 +49,5 @@ class CarApp(App):
 
 
 if __name__ == '__main__':
-    Builder.load_file("car.kv")
     CarApp().run()
 
