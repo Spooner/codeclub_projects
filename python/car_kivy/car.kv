@@ -52,4 +52,15 @@
                 on_press: root.move_backwards()
 
             Label:
+
+        BoxLayout:
+            orientation: 'horizontal'
+
+            Button:
+                text: 'Quit'
+                on_press: app.stop() 
+                size: 200, 100
+                size_hint: None, None
+
+
        
