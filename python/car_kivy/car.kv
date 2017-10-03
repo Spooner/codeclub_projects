@@ -1,0 +1,55 @@
+<Car>:
+    forwards_button: forwards_button
+    backwards_button: backwards_button
+    left_button: left_button
+    right_button: right_button
+
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+        on_touch_up: root.stop()
+
+        Label:
+            text: 'ROBOT-O-MATIC Controller'
+            font_size: 40
+            height: 200
+            size_hint_y: None
+           
+
+        GridLayout:
+            cols: 3
+            spacing: 8
+            row_default_height: 200
+            row_default_width: 200
+            row_force_default: True
+
+            Label:
+
+            Button:
+                text: 'Forwards'
+                id: forwards_button
+                on_press: root.move_forwards()
+
+            Label:
+   
+            Button:
+                text: 'Rotate Left'
+                id: left_button
+                on_press: root.rotate_left()
+       
+            Label:
+
+            Button:
+                text: 'Rotate Right'
+                id: right_button
+                on_press: root.rotate_right()
+
+            Label:
+
+            Button:
+                text: 'Backwards'
+                id: backwards_button
+                on_press: root.move_backwards()
+
+            Label:
+       
