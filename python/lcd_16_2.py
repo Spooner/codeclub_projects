@@ -24,15 +24,14 @@ def get_now():
     return now
 
 
-lcd = LCD(rs=5, en=6,  # LCD #4 and #6, respectively
-          d4=22, d5=23, d6=24, d7=25, # LCD pins #11, #12, #13, #14
+lcd = LCD(rs=25, en=24,  # LCD #4 and #6, respectively
+          d4=23, d5=17, d6=18, d7=22, # LCD pins #11, #12, #13, #14
           cols=16, lines=2)
 # Connect potentiometer to #3 (V0) for backlight brightness control.
 # #15 and #16 power the backlight (5V and GND, respectively)
 
 while True:
     lcd.clear()
-    #lcd.home()
-    #lcd.set_cursor(0, 0)
-    lcd.message('{now}\nIP {ip_addr}'.format(now=get_now(), ip_addr=get_ip_addr()))
+    lcd.message(get_now())
+    lcd.message('IP: %s' % get_ip_addr())
     sleep(1)
